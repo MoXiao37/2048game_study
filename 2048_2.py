@@ -64,7 +64,7 @@ class GameField(object):
 				# 先将非零的元素全拿出来加入到新列表
 				new_row = [i for i in row if i != 0]
 				# 按照原列表的大小， 给新列表后面补零
-				new_row = [0 for i in range(len(row) - len(new_row))]
+                new_row += [0 for i in range(len(row) - len(new_row))]
 				return new_row
 
 			def merge(row):
